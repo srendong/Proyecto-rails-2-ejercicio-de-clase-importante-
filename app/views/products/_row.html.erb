@@ -1,0 +1,14 @@
+<tr id="<%= product.id  %>">
+  <td>
+    <%= product.name  %>
+  </td>
+
+  <td>
+    <%= product.price  %>
+  </td>
+
+  <td>
+    <%= link_to "Edit", edit_product_path(product), remote: true  %>
+  </td>
+
+</tr>

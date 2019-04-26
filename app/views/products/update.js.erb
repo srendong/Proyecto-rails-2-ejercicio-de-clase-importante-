@@ -1,0 +1,11 @@
+<% if @product.errors.empty?  %>
+
+    $('table tbody tr#<%= @product.id  %>').replaceWith('<%= j render "row", product: @product  %>')
+    $('.alert-success').html("Product edited").show()
+    $('#product-modal').modal('hide')
+
+<% else %>
+
+    alert("<%= @product.errors.full_messages[0]  %>")
+
+<% end %>

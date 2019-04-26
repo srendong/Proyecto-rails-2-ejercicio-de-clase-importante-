@@ -1,0 +1,11 @@
+<% if @product.errors.empty?  %>
+
+    $('table tbody').prepend('<%= j render "row", product: @product  %>')
+    $('.alert-success').html("Product created").show()
+    $('#product-modal').modal('hide')
+
+<% else %>
+
+    alert("<%= @product.errors.full_messages[0]  %>")
+
+<% end %>
